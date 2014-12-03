@@ -1,0 +1,28 @@
+{
+  "name": "Dalmation",
+  "version": "1.0.0",
+  "description": "This is REST Module for Dalmation search",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/speedyankur/Dalmation"
+  },
+  "keywords": [
+    "Dalmation",
+    "search",
+    "Image"
+  ],
+  "author": "Ankur Garha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/speedyankur/Dalmation/issues"
+  },
+  "homepage": "https://github.com/speedyankur/Dalmation",
+  "dependencies": {
+    "mongojs": "^0.17.0",
+    "restify": "^2.8.3"
+  }
+}
