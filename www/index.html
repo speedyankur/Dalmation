@@ -1,0 +1,150 @@
+<html>
+	<head>
+		<title>Local HTML</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/farbtastic.css"/>
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/farbtastic.js"></script>
+		<script src="js/jquery.ui.ipad.js"></script>
+		<script src="js/kinetic-v5.0.1.min.js"></script>
+		<script src="js/app.js"></script>
+
+	</head>
+	<body >
+		<div id="textOverlay">
+			<div>
+				<ol>
+					<li>Tap the text to position it </li>
+					<li>Tap 'Done' button below when you are done with positioning</li>
+				</ol>		
+				<button type="button" class="btn btn-primary btn-lg btn-block" id="doneText">Done</button>					
+			</div>
+			
+		</div>	
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+
+		      <div class="modal-body">
+				<form role="form" class="form-horizontal">
+				  <div class="form-group">
+				    <label for="exampleText" class="col-xs-3 control-label">Text*</label>
+				    <div class="col-xs-9">
+				    	<input type="text" class="form-control" id="exampleText" required placeholder="Enter Text">
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleTextSize" class="col-xs-3 control-label">Size : <span id="fontSizeDisplayer">20px</span></label>
+				    <div class="col-xs-9">
+				    	<input type="range" class="form-control" id="exampleTextSize" value="20" min="5" max="25" />	
+				    </div>    
+				  </div>	
+				  <div class="form-group">
+				    <label for="exampleBgColor" class="col-xs-3 control-label">Bg Color</label>
+				    <div class="col-xs-9">
+						<select class="form-control" id="exampleBgColor" >
+						  <option>Black</option>
+						  <option selected>White</option>
+						  <option>Green</option>
+						  <option>Red</option>
+						  <option>Blue</option>
+						  <option>Yellow</option>
+						  <option>Cyan</option>					  					  					  
+						</select>
+				    </div>    
+				  </div>	
+				  <div class="form-group">
+				    <div class="col-xs-6">
+				  		<button type="button" data-dismiss="modal" class="btn btn-danger btn-lg btn-block" >Cancel</button>	  	
+				    </div>    
+				    <div class="col-xs-6">
+				  		<button type="button" class="btn btn-primary btn-lg btn-block" id="addText">Add Text</button>	  	
+				    </div>    				  
+
+				  </div>				  
+		  
+				</form>
+		      </div>
+		    </div>
+		  </div>
+		</div>		
+		<nav class="navbar navbar-default " role="navigation">
+		  <div class="container" >
+
+			
+				
+			<button type="button" class="btn btn-success navbar-btn pull-left" id="save">
+				&nbsp;<span class="glyphicon glyphicon-save"></span>&nbsp;Get Data
+			</button>
+			<button type="button" class="btn btn-default navbar-btn pull-right" style="margin-right: 20px;" id="undo">
+				&nbsp;<span class="glyphicon glyphicon-arrow-left"></span>&nbsp; Undo
+			</button>
+
+		  </div>
+		</nav>	
+
+		<div class="container" >
+
+			<div class="row">
+				<div class="col-xs-6">
+					<input type="file" id="open" name="files[]"  />
+				</div>				
+				<div class="col-xs-6">
+					<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#myModal">
+						&nbsp;<span class="glyphicon glyphicon-text-width"></span>&nbsp;Add Text
+					</button>
+				</div>				
+
+			</div>	
+			<br/>	
+
+			<div class="row">
+				<div class="col-xs-5">
+					<select class="form-control" id="shape" >
+					  <option>Circle</option>
+					  <option>Rectangle</option>
+					  <option>Oval</option>
+					  <option>Line</option>					  
+					  <option>Arrow</option>
+					</select>
+				</div>			
+				<div class="col-xs-4">
+					<select class="form-control" id="color" >
+					  <option>Black</option>
+					  <option>White</option>
+					  <option>Green</option>
+					  <option>Red</option>
+					  <option>Blue</option>
+					  <option>Yellow</option>
+					  <option>Cyan</option>					  					  					  
+					</select>
+				</div>
+				<div class="col-xs-3">
+					<select class="form-control" id="width" >
+					  <option selected>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					  <option>6</option>
+					  <option>7</option>
+					</select>					
+				
+				</div>				
+			</div>	
+			<br/>		
+			<div class="row">
+				<div class="col-md-12">		
+
+					<div id="container" class="text-center"></div>					
+				</div>
+			</div>
+		</div>
+
+
+
+	</body>
+</html>
